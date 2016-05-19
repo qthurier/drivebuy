@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">HarryApp</string>
+    <string name="package_name">com.drivebuy.harryapp</string>
+    <string name="title_activity_maps">HarryApp</string>
+    <string name="title_activity_answer">AnswerActivity</string>
+    <string name="title_activity_notification">NotificationActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_notif_task">NotifTaskActivity</string>
+    <string name="button_send">send</string>
+    <string name="button_items">items</string>
+    <string name="button_bring">bring</string>
+    <string name="button_tasks">tasks</string>
+
+        <string-array name="item_sizes">
+            <item>Small</item>
+            <item>Medium</item>
+            <item>Large</item>
+        </string-array>
+
+    <string name="add_task_url">http://3-dot-thematic-metric-556.appspot.com/harryapp/add_task</string>
+    <string name="list_tasks_url">http://3-dot-thematic-metric-556.appspot.com/harryapp/list_tasks</string>
+    <string name="list_tasks_on_route_url">http://3-dot-thematic-metric-556.appspot.com/harryapp/list_tasks_on_route</string>
+    <string name="save_route_url">http://3-dot-thematic-metric-556.appspot.com/harryapp/save_route</string>
+    <string name="registration_url">http://3-dot-thematic-metric-556.appspot.com/harryapp/register</string>
+    <string name="fetch_picture_url">http://3-dot-thematic-metric-556.appspot.com/harryapp/serve_image</string>
+    <string name="title_activity_list">ListActivity</string>
+    <string name="title_activity_listing">Tasks on your route</string>
+    <string name="title_notification">Task description</string>
+    <string name="android_key">AIzaSyAGpgMiB_gzAgg64SJXn7kp3DDOXuLGzmA</string>
+</resources>

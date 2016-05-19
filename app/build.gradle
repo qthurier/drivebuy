@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.drivebuy.harryapp"
+        minSdkVersion 20
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true // "uses or overrides a deprecated API"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    packagingOptions { // "duplicate files during packaging"
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.google.android.gms:play-services-location:8.4.0'
+    compile 'com.android.support:cardview-v7:21.0.+'
+    compile 'com.android.support:recyclerview-v7:21.0.+'
+    compile 'com.google.android.gms:play-services-gcm:8.4.0'
+    compile 'com.squareup.okhttp3:okhttp:3.0.1'
+    compile 'com.google.maps.android:android-maps-utils:0.4+'
+    compile 'com.akexorcist:googledirectionlibrary:1.0.4'
+    compile 'com.google.apis:google-api-services-vision:v1-rev2-1.21.0'
+    compile 'com.google.api-client:google-api-client-android:1.20.0' exclude module: 'httpclient'
+    compile 'com.google.http-client:google-http-client-gson:1.20.0' exclude module: 'httpclient'
+}
+
+apply plugin: 'com.google.gms.google-services' // for gms use + >> setting graddle path + json conf
+

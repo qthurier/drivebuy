@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="230dp"
+    android:background="@drawable/curve_shap"
+    android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view1"
+            android:layout_marginTop="15dp"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            card_view:cardCornerRadius="4dp">
+            <fragment
+                android:id="@+id/place_autocomplete_from"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment" />
+        </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view2"
+            android:layout_marginTop="15dp"
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/card_view1"
+            card_view:cardCornerRadius="4dp">
+            <fragment
+                android:id="@+id/place_autocomplete_to"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment" />
+        </android.support.v7.widget.CardView>
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_below="@+id/card_view2"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="35dp"
+        android:id="@+id/radio">
+        <RadioButton android:id="@+id/radio_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small"  android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+        <RadioButton android:id="@+id/radio_medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"  android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+        <RadioButton android:id="@+id/radio_large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large"  android:textColor="@android:color/white"
+            android:textStyle="bold"/>
+            <!--android:onClick="onRadioButtonClicked"/>-->
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_below="@+id/radio"
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btn_add_picture"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="0dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:text="Picture"
+            android:textColor="#5DBCD2"
+            android:textStyle="bold"
+            android:background="@android:color/white"/>
+
+        <Button
+            android:id="@+id/btn_add_task"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="120dp"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:text="Add Task"
+            android:textColor="#5DBCD2"
+            android:textStyle="bold"
+            android:background="@android:color/white"
+            android:onClick="AddTask"/>
+    </RelativeLayout>
+
+</RelativeLayout>
